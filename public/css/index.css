@@ -4,8 +4,13 @@ Page template
 */
 
 body {
-  background-color: #ccc;
-  background-image: url("http://socialcomputing.media.mit.edu/images/background.png");
+  background: #4fa7ff; /* Old browsers */
+  background: -moz-linear-gradient(left,  #4fa7ff 0%, #f4f4f4 50%, #4fa7ff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#4fa7ff), color-stop(50%,#f4f4f4), color-stop(100%,#4fa7ff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #4fa7ff 0%, #f4f4f4 50%, #4fa7ff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #4fa7ff 0%,#f4f4f4 50%,#4fa7ff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #4fa7ff 0%,#f4f4f4 50%,#4fa7ff 100%); /* IE10+ */
+  background: linear-gradient(to right,  #4fa7ff 0%,#f4f4f4 50%,#4fa7ff 100%); /* W3C */
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
