@@ -1,0 +1,24 @@
+{
+  "name": "script-stems",
+  "version": "0.0.1",
+  "description": "Visualizing writing scripts",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zahanm/script-stems.git"
+  },
+  "keywords": [
+    "visualization",
+    "d3"
+  ],
+  "author": "Zahan Malkani <z@zahanm.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.0.1",
+    "optimist": "~0.3.5"
+  }
+}
