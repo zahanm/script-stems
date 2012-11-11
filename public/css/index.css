@@ -17,7 +17,6 @@ body {
 }
 
 #page {
-  height: 1000px;
   width: 960px;
   margin: auto;
   background-color: #fefefe;
@@ -26,4 +25,24 @@ body {
 
 .header {
   padding: 10px 20px;
+}
+
+/*
+SVG
+*/
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.node circle {
+  fill: white;
+  stroke: steelBlue;
+  stroke-width: 1.5px;
+}
+
+.node circle:hover {
+  fill: lightBlue;
 }

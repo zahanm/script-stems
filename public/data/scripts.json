@@ -1,23 +1,23 @@
 {
-  "name": "New Roman System of Scripts",
+  "title": "New Roman System of Scripts",
   "desc": "The Old Roman System of scripts undergoes a change between the 2nd and 4th centuries AD, creating the New Roman system, which is influenced by Old Roman Cursive and Greek Uncial (especially BR Uncial).",
   "children": [
     {
-      "name": "Uncial (Littera Uncialis)",
+      "title": "Uncial (Littera Uncialis)",
       "desc": "Round, roots in Literary Cursive, very few abbreviations (only abbreviations are used for <em>nomina sacra</em>).",
       "children": [
         {
-          "name": "Merovingian Uncial",
+          "title": "Merovingian Uncial",
           "desc": "Flat head ascender of D, hook on head of T, clowed bow E, sharp diagonal stroke on Y, etc.",
           "children": []
         },
         {
-          "name": "Half Uncial",
+          "title": "Half Uncial",
           "desc": "More rapid than Uncial, smaller strokes, straight pen, upright <em>ductus</em>",
           "children": []
         },
         {
-          "name": "New Roman Cursive",
+          "title": "New Roman Cursive",
           "desc": "Result of reform of cursive scripts from s. iii<sup>ex</sup> - s. iv<sup>in</sup>. Quicker, loops introduced. Influence on Hald Uncial.",
           "children": []
         }
