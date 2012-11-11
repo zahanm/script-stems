@@ -34,9 +34,24 @@
       .attr("r", 10);
 
     node.append("text")
-      .attr("dx", function (d) { return - d.title.length * 3; })
+      .attr("class", "title")
+      .attr("text-anchor", "middle")
       .attr("dy", 30)
       .text(function (d) { return d.title; });
+
+    /*
+    SVG does not support word wrap, do put "desc" in HTML <foreignobject>
+    -------
+    */
+
+    node.append("foreignObject")
+      .attr("width", 270)
+      .attr("height", 100)
+      .attr("x", -135)
+      .attr("y", 40)
+    .append("xhtml:body")
+      .attr("class", "desc")
+      .html(function (d) { return d.desc; });
 
   });
 

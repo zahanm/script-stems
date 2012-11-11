@@ -46,3 +46,9 @@ SVG
 .node circle:hover {
   fill: lightBlue;
 }
+
+.node .desc {
+  background: white;
+  text-align: center;
+  overflow: ellipsis;
+}
