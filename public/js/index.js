@@ -40,7 +40,7 @@
       .text(function (d) { return d.title; });
 
     /*
-    SVG does not support word wrap, do put "desc" in HTML <foreignobject>
+    SVG does not support word wrap, so put "desc" in HTML <foreignobject>
     -------
     */
 
