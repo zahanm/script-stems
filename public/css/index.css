@@ -23,3 +23,7 @@ body {
   background-color: #fefefe;
   box-shadow: 0 0 15px #333;
 }
+
+.header {
+  padding: 10px 20px;
+}
