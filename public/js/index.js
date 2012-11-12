@@ -1,5 +1,6 @@
 
-(function () {
+(function (exports) {
+  "use strict";
 
   var width = 960;
   var height = 700;
@@ -15,8 +16,15 @@
   var tree = d3.layout.tree()
     .size([width - 100, 525]);
 
-  d3.json("/data/scripts.json", function (json) {
-    var nodes = tree.nodes(json);
+  var fulldataset = null;
+  var displaydepth = 2;
+
+  function updateTree(root) {
+
+    root = root || fulldataset;
+    var data = pruneTree(root, displaydepth)
+
+    var nodes = tree.nodes(data);
 
     var link = canvas.selectAll("path.link")
       .data(tree.links(nodes))
@@ -25,7 +33,7 @@
       .attr("d", diagonal);
 
     var node = canvas.selectAll("g.node")
-      .data(nodes)
+      .data(nodes, function (d) { return d.title; })
     .enter().append("g")
       .attr("class", "node")
       .attr("transform", function (d) { console.log(d); return "translate(" + d.x + "," + d.y + ")"; });
@@ -53,6 +61,34 @@
       .attr("class", "desc")
       .html(function (d) { return d.desc; });
 
+  }
+
+  function pruneTree(root, depth) {
+    var pruned = {}, k = null;
+
+    for (k in root) {
+      if (root.hasOwnProperty(k) && k !== "children") {
+        pruned[k] = root[k];
+      }
+    }
+
+    if (depth !== 0) {
+      pruned.children = root.children.map(function (child) {
+        return pruneTree(child, depth - 1);
+      });
+    } else {
+      // base case
+      pruned.children = [];
+    }
+
+    return pruned;
+  }
+
+  d3.json("/data/scripts.json", function (json) {
+    fulldataset = json;
+
+    updateTree(null);
+
   });
 
-}());
+}(window));
