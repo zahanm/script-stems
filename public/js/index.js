@@ -110,6 +110,7 @@
       .attr("class", "desc")
       .html(function (d) { return d.desc; });
 
+    d3.select("#root-title").html(displayroot.title);
     if (displayroot.family)
       d3.select("#root-family").html(displayroot.family + " <small>family</small>");
     else
