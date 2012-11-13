@@ -3,7 +3,7 @@
   "use strict";
 
   var width = 1100;
-  var height = 700;
+  var height = 600;
 
   var canvas = d3.select("#scripttree").append("svg")
     .attr("width", width)
@@ -86,7 +86,7 @@
       .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
 
     entrance.append("circle")
-      .attr("r", 10)
+      .attr("r", 15)
       .on("click", function (d) { updateTree(d.title); });
 
     entrance.append("text")
