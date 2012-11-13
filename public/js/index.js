@@ -2,7 +2,7 @@
 (function (exports) {
   "use strict";
 
-  var width = 960;
+  var width = 1100;
   var height = 700;
 
   var canvas = d3.select("#scripttree").append("svg")
@@ -15,7 +15,7 @@
   var diagonal = d3.svg.diagonal();
 
   var tree = d3.layout.tree()
-    .size([width - 100, 525]);
+    .size([width - 100, height - 175]);
 
   var fulldataset = null;
   var displaydepth = 1;
@@ -156,7 +156,7 @@
    * Initial data acquisition
    * ------------------------
    */
-  d3.json("/data/scripts.json", function (json) {
+  d3.json("data/scripts.json", function (json) {
     fulldataset = json;
 
     updateTree(null);
