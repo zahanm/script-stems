@@ -89,7 +89,7 @@
       .attr("r", 15)
       .on("click", function (d) { updateTree(d.title); });
 
-    var w = 150;
+    var w = 160;
     entrance.append("foreignObject")
       .attr("width", w)
       .attr("height", 36)
@@ -110,7 +110,15 @@
       .attr("class", "desc")
       .html(function (d) { return d.desc; });
 
-    console.log("Updated");
+    if (displayroot.family)
+      d3.select("#root-family").html(displayroot.family + " <small>family</small>");
+    else
+      d3.select("#root-family").html("");
+    if (displayroot.subfamily)
+      d3.select("#root-subfamily").html(displayroot.subfamily + " <small>sub-family</small>");
+    else
+      d3.select("#root-subfamily").html("");
+
     d3.event && d3.event.stopPropagation();
   }
 

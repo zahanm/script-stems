@@ -25,6 +25,22 @@ body {
 
 .header {
   padding: 10px 20px;
+  width: 700px;
+  height: 150px;
+  display: inline-block;
+}
+
+.aux-info {
+  padding: 10px 20px;
+  width: 250px;
+  height: 156px;
+  display: inline-block;
+  float: right;
+  box-shadow: 0 0 10px #666;
+}
+
+.aux-info small {
+  color: #777;
 }
 
 /*
