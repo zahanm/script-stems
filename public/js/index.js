@@ -89,19 +89,23 @@
       .attr("r", 15)
       .on("click", function (d) { updateTree(d.title); });
 
-    entrance.append("text")
+    var w = 150;
+    entrance.append("foreignObject")
+      .attr("width", w)
+      .attr("height", 36)
+      .attr("x", -w/2)
+      .attr("y", 20)
+    .append("xhtml:body")
       .attr("class", "title")
-      .attr("text-anchor", "middle")
-      .attr("dy", 30)
-      .text(function (d) { return d.title; });
+      .html(function (d) { return d.title; });
 
     // SVG does not support word wrap, so put "desc" in HTML <foreignobject>
-    var w = 270;
+    w = 270;
     entrance.append("foreignObject")
       .attr("width", w)
       .attr("height", 100)
       .attr("x", -w/2)
-      .attr("y", 40)
+      .attr("y", 54)
     .append("xhtml:body")
       .attr("class", "desc")
       .html(function (d) { return d.desc; });

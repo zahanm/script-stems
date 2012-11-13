@@ -47,6 +47,11 @@ SVG
   fill: lightBlue;
 }
 
+.node .title {
+  background: white;
+  text-align: center;
+}
+
 .node .desc {
   background: white;
   text-align: center;
