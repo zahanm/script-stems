@@ -160,10 +160,32 @@
     }, null);
   }
 
+  function findParentOfNodeWithTitle(title, root) {
+    if (!root) { root = fulldataset; }
+    if (root.title === title) {
+      // gone too far
+      return root;
+    }
+    var childTitles = root.children.map(function (child) { return child.title; });
+    if (childTitles.indexOf(title) >= 0) {
+      return root;
+    } else {
+      return root.children.reduce(function (prev, child) {
+        if (prev) { return prev; }
+        return findParentOfNodeWithTitle(title, child);
+      }, null);
+    }
+  }
+
   /**
-   * Event handlers
+   * Button handlers
    * --------------
    */
+
+   d3.select("#control-up").on("click", function () {
+     updateTree(findParentOfNodeWithTitle(displayroot.title));
+   });
+   d3.select("#control-reset").on("click", function () { updateTree(null); });
 
   /**
    * Initial data acquisition
