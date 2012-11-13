@@ -18,7 +18,7 @@
     .size([width - 100, 525]);
 
   var fulldataset = null;
-  var displaydepth = 2;
+  var displaydepth = 1;
   var displayroot = null;
   var animatime = 2000;
 
@@ -58,7 +58,11 @@
     // enter path
     link.enter().insert("path", ":first-child")
       .attr("class", "link")
-      .attr("d", diagonal);
+      .attr("stroke-opacity", 0.0)
+      .attr("d", diagonal)
+    .transition()
+      .duration(animatime)
+      .attr("stroke-opacity", 1.0);
 
     // update selection
     var node = canvas.selectAll("g.node")
@@ -75,6 +79,10 @@
     // enter selection
     var entrance = node.enter().append("g")
       .attr("class", "node")
+      .attr("transform", function (d) { return "translate(" + d.x + "," + height + ")"; });
+
+    entrance.transition()
+      .duration(animatime)
       .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
 
     entrance.append("circle")
