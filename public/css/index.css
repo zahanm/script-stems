@@ -4,13 +4,13 @@ Page template
 */
 
 body {
-  background: #4fa7ff; /* Old browsers */
-  background: -moz-linear-gradient(left,  #4fa7ff 0%, #f4f4f4 50%, #4fa7ff 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#4fa7ff), color-stop(50%,#f4f4f4), color-stop(100%,#4fa7ff)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #4fa7ff 0%, #f4f4f4 50%, #4fa7ff 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  #4fa7ff 0%,#f4f4f4 50%,#4fa7ff 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  #4fa7ff 0%,#f4f4f4 50%,#4fa7ff 100%); /* IE10+ */
-  background: linear-gradient(to right,  #4fa7ff 0%,#f4f4f4 50%,#4fa7ff 100%); /* W3C */
+  background: #42ba37; /* Old browsers */
+  background: -moz-linear-gradient(left,  #42ba37 0%, #c0efa7 50%, #42ba37 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#42ba37), color-stop(50%,#c0efa7), color-stop(100%,#42ba37)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #42ba37 0%,#c0efa7 50%,#42ba37 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #42ba37 0%,#c0efa7 50%,#42ba37 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #42ba37 0%,#c0efa7 50%,#42ba37 100%); /* IE10+ */
+  background: linear-gradient(to right,  #42ba37 0%,#c0efa7 50%,#42ba37 100%); /* W3C */
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -114,18 +114,18 @@ SVG
 
 .link {
   fill: none;
-  stroke: #ccc;
-  stroke-width: 1.5px;
+  stroke: SaddleBrown;
+  stroke-width: 5px;
 }
 
 .node circle {
-  fill: white;
-  stroke: steelBlue;
-  stroke-width: 1.5px;
+  fill: Green;
+  stroke: Green;
+  stroke-width: 3px;
 }
 
 .node circle:hover {
-  fill: lightBlue;
+  fill: GreenYellow;
 }
 
 .node .title {
