@@ -1,27 +1,411 @@
 {
-  "title": "New Roman System of Scripts",
-  "desc": "The Old Roman System of scripts undergoes a change between the 2nd and 4th centuries AD, creating the New Roman system, which is influenced by Old Roman Cursive and Greek Uncial (especially BR Uncial).",
-  "children": [
-    {
-      "title": "Uncial (Littera Uncialis)",
-      "desc": "Round, roots in Literary Cursive, very few abbreviations (only abbreviations are used for <em>nomina sacra</em>).",
-      "children": [
+    "title": "Capitals",
+    "desc": "",
+    "family": "Roman System of Scripts (31 BC - 14 AD)",
+    "subfamily": "Old Roman System of Scripts",
+    "children": [
         {
-          "title": "Merovingian Uncial",
-          "desc": "Flat head ascender of D, hook on head of T, clowed bow E, sharp diagonal stroke on Y, etc.",
-          "children": []
+            "title": "Square Capitals",
+            "desc": "Angular, good for chisel-writing because very square, also used for high quality manuscripts.",
+            "family": "Roman System of Scripts (31 BC - 14 AD)",
+            "subfamily": "Old Roman System of Scripts",
+            "children": []
         },
         {
-          "title": "Half Uncial",
-          "desc": "More rapid than Uncial, smaller strokes, straight pen, upright <em>ductus</em>",
-          "children": []
+            "title": "Rustic Capitals",
+            "desc": "Similar to Square Capitals, easier to write with a reed pen or quill because more fluid lines are used. Some instances of Rustic Capitals predate Square Capitals.",
+            "family": "Roman System of Scripts (31 BC - 14 AD)",
+            "subfamily": "Old Roman System of Scripts",
+            "children": [
+                {
+                    "title": "Rustic Capitals in Stone",
+                    "desc": "<em>Scriptura Actuaria</em>",
+                    "family": "Roman System of Scripts (31 BC - 14 AD)",
+                    "subfamily": "Old Roman System of Scripts",
+                    "children": []
+                }
+            ]
         },
         {
-          "title": "New Roman Cursive",
-          "desc": "Result of reform of cursive scripts from s. iii<sup>ex</sup> - s. iv<sup>in</sup>. Quicker, loops introduced. Influence on Hald Uncial.",
-          "children": []
+            "title": "Old Roman Cursive",
+            "desc": "Used for correspondence, administrative purposes, every day writing, etc. Fragmented letter forms, high fluidity (ability to be written quickly).",
+            "family": "Roman System of Scripts (31 BC - 14 AD)",
+            "subfamily": "Old Roman System of Scripts",
+            "children": [
+                {
+                    "title": "Literary Cursive",
+                    "desc": "Variant of Old Roman Cursive. More formal.",
+                    "family": "Roman System of Scripts (31 BC - 14 AD)",
+                    "subfamily": "Old Roman System of Scripts",
+                    "children": []
+                },
+                {
+                    "title": "New Roman Cursive",
+                    "desc": "Result of a reform of cursive scripts from s. iii<sup>ex</sup> – s. iv<sup>in</sup>. Quicker, loops introduced, influence on later Half Uncial.)",
+                    "family": "Roman System of Scripts (31 BC - 14 AD)",
+                    "subfamily": "Old Roman System of Scripts",
+                    "children": [
+                        {
+                            "title": "Merovingian Chancery",
+                            "desc": "Elongated ascenders and descenders (no loops), spider-like, attenuation, and compression.",
+                            "family": "Roman System of Scripts (31 BC - 14 AD)",
+                            "subfamily": "Old Roman System of Scripts",
+                            "children": []
+                        },
+                        {
+                            "title": "Ravenna Chancery",
+                            "desc": "Elegance and formality, ligatures and loops (foot-loop abbreviation), exaggerated letter forms.",
+                            "family": "Roman System of Scripts (31 BC - 14 AD)",
+                            "subfamily": "Old Roman System of Scripts",
+                            "children": []
+                        },
+                        {
+                            "title": "Visigothic Miniscule",
+                            "desc": "Kept in Spain until s. xii.",
+                            "family": "National Hands (Sub-Roman Hands) (s. v and s. vi - s. viii<sup>ex</sup> and s. ix)",
+                            "bastardof": "New Roman Cursive",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "title": "Uncial (<em>Littera Uncialis</em>)",
+                    "desc": "A combination of Old Roman Cursive, Greek Uncial (especially BR Uncial), and Literary Cursive, <em>Littera Uncialis</em> is characterized by its round letter forms and typically has very few abbreviations (typically the only abbreviations used are for <em>nomina sacra</em>).",
+                    "family": "Roman System of Scripts (31 BC - 14 AD)",
+                    "subfamily": "New Roman System of Scripts",
+                    "children": [
+                        {
+                            "title": "Merovingian Uncial",
+                            "desc": "Characterized by flat head of ascender on D, hook on head of T, clowed bow E, sharp diagonal stroke on Y, etc.",
+                            "family": "Roman System of Scripts (31 BC - 14 AD)",
+                            "subfamily": "New Roman System of Scripts",
+                            "children": []
+                        },
+                        {
+                            "title": "Half Uncial",
+                            "desc": "More rapid than Uncial, smaller strokes, straight pen, upright ductus.",
+                            "family": "Roman System of Scripts (31 BC - 14 AD)",
+                            "subfamily": "New Roman System of Scripts",
+                            "children": [
+                                {
+                                    "title": "Miniscule Scripts",
+                                    "desc": "Quattrolinear Book Scripts",
+                                    "family": "National Hands (Sub-Roman Hands) (s. v and s. vi - s. viii<sup>ex</sup> and s. ix)",
+                                    "children": [
+                                        {
+                                            "title": "Corbie AB Miniscule",
+                                            "desc": "Regularity of script, characteristic a and b, z-shaped abbreviation bars, use of the <em>punctus interrogativus</em>, etc.",
+                                            "family": "National Hands (Sub-Roman Hands) (s. v and s. vi - s. viii<sup>ex</sup> and s. ix)",
+                                            "children": []
+                                        },
+                                        {
+                                            "title": "Luxeuil Miniscule",
+                                            "desc": "Erratic ductus (rounded and angular/broken forms are both used), lengthening, clubbed-look of ascenders and descenders.",
+                                            "family": "National Hands (Sub-Roman Hands) (s. v and s. vi - s. viii<sup>ex</sup> and s. ix)",
+                                            "children": []
+                                        },
+                                        {
+                                            "title": "German Miniscule",
+                                            "desc": "Many ligatures, angular/flat-headed Half-Uncial G, etc.",
+                                            "family": "National Hands (Sub-Roman Hands) (s. v and s. vi - s. viii<sup>ex</sup> and s. ix)",
+                                            "children": []
+                                        },
+                                        {
+                                            "title": "Beneventan Miniscule",
+                                            "desc": "Middle 8th-century, breadth, roundness, formal, regular, etc.",
+                                            "family": "National Hands (Sub-Roman Hands) (s. v and s. vi - s. viii<sup>ex</sup> and s. ix)",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Cursive Half Uncial (Quarter Uncial)",
+                                    "desc": "Rapid form of Half Uncial. Lots of ligatures. Is the foundation for Insular Scripts. Introduced into Ireland around s. vi<sup>ex</sup>.",
+                                    "family": "Roman System of Scripts (31 BC - 14 AD)",
+                                    "subfamily": "New Roman System of Scripts",
+                                    "children": [
+                                        {
+                                            "title": "Formal book script",
+                                            "desc": "Like Roman Half-Uncial, but not as formal.",
+                                            "family": "Insular Scripts",
+                                            "children": []
+                                        },
+                                        {
+                                            "title": "Insular Cursive Miniscule (<em>Cursiva</em>)",
+                                            "desc": "Ligatures and loops, detailed calligraphy distorts letter forms, detailed, tends to point, many abbreviations.",
+                                            "family": "Insular Scripts",
+                                            "bastardof": "Phase II",
+                                            "children": [
+                                                {
+                                                    "title": "Insular Set Miniscule (<em>Cursiva Formata</em>)",
+                                                    "desc": "Written with a slanted pen, several cursive letter forms, round D and S.",
+                                                    "family": "Insular Scripts",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "title": "Insular Pointed Cursive Miniscule (from the s. ix<sup>1</sup>)",
+                                                    "desc": "",
+                                                    "family": "Insular Scripts",
+                                                    "children": [
+                                                        {
+                                                            "title": "Anglo-Saxon Pointed Miniscule (s. ix<sup>ex</sup>)",
+                                                            "desc": "Elegant, pointed, backs of bows broken, etc.",
+                                                            "family": "Anglo-Saxon Scripts",
+                                                            "children": [
+                                                                {
+                                                                    "title": "Anglo-Saxon Square Miniscule",
+                                                                    "desc": "Differs from the Anglo-Saxon Pointed Miniscule in that it is square-looking. Formal and regular ductus, extra stroke on several backs of letters, long descenders on S, word separation, etc.",
+                                                                    "family": "Anglo-Saxon Scripts",
+                                                                    "children": [
+                                                                        {
+                                                                            "title": "Anglo-Saxon Round Miniscule and Anglo Caroline Miniscule",
+                                                                            "desc": "Comes from Caroline script and Anglo-Saxon Square Miniscule (s. xi<sup>2</sup>).",
+                                                                            "category": "Anglo-Saxon Scripts",
+                                                                            "bastardof": "English Caroline Miniscule",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Rapid Cursive",
+                                            "desc": "",
+                                            "family": "Insular Scripts",
+                                            "children": [
+                                                {
+                                                    "title": "Phase I",
+                                                    "desc": "",
+                                                    "family": "Insular Scripts",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "title": "Phase II",
+                                                    "desc": "",
+                                                    "family": "Insular Scripts",
+                                                    "children": [
+                                                        {
+                                                            "title": "Insular Half Uncial",
+                                                            "desc": "Text of the <em>Lindisfarne Gospels</em>. Round and vertically compressed because of adherence to head and base lines.",
+                                                            "family": "Insular Scripts",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "title": "Insular Hybrid Miniscule",
+                                                            "desc": "Similar to insular half-Uncial. The angle of the nib is the only difference. Also tends to seem overly-calligraphic.",
+                                                            "family": "Insular Scripts",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "title": "Insular Current",
+                                                            "desc": "<em>Cursiva Currens</em>",
+                                                            "family": "Insular Scripts",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Caroline Miniscule (<em>Littera Miniscula Carolina</em>)",
+                                    "desc": "(Most of Western Europe s. viii<sup>ex</sup> – xiii<sup>in</sup>).",
+                                    "family": "Caroline",
+                                    "bastardof": "Insular Cursive Miniscule",
+                                    "children": [
+                                        {
+                                            "title": "English Caroline Miniscule",
+                                            "desc": "During King Edgar’s reign (957-975), Archbishop Dunstan, Bishop Aethelwold, and Bishop Oswald (all reformers) introduced Caroline Miniscule. English Caroline Miniscule is Caroline Miniscule with the addition of feet on minims. These feet are courtesy of Anglo-Saxon Miniscule.",
+                                            "family": "Caroline",
+                                            "bastardof": "Anglo-Saxon Pointed Miniscule",
+                                            "children": [
+                                                {
+                                                    "title": "English Protogothic Book Script",
+                                                    "desc": "Sloping feet are constantly put on the minims. One can see the influence of Anglo-Saxon Miniscule.",
+                                                    "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Continental Caroline Miniscule",
+                                            "desc": "Uniform head and base lines, uniform ascenders and descenders, roundness, straight minims.",
+                                            "family": "Caroline",
+                                            "children": [
+                                                {
+                                                    "title": "Continental Protogothic Book Script",
+                                                    "desc": "Oval, compression, does not have the horizontal feet of English Caroline Miniscule.",
+                                                    "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Documentaria",
+                                            "desc": "",
+                                            "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                            "children": [
+                                                {
+                                                    "title": "Protogothic Documentary Script",
+                                                    "desc": "The speed and lengthened ascenders and descenders separate this from Protogothic Book Script. Thin pointed script and thicker pen script come together to create the <em>litterae notabiliores</em>.",
+                                                    "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Protogothic Cursiva",
+                                            "desc": "",
+                                            "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                            "children": [
+                                                {
+                                                    "title": "Protogothic Semicursiva",
+                                                    "desc": "",
+                                                    "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                                    "children": [
+                                                        {
+                                                            "title": "English Cursive Book Script (<em>Cursiva Anglicana</em> or <em>Anglicana Formata</em>)",
+                                                            "desc": "Linking letters, loops, speed, decorated to impress. Used for English documentary scripts from s. xiii<sup>in</sup> to s. xiv)",
+                                                            "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "title": "Secretary (<em>Cursiva Media</em>)",
+                                                    "desc": "Speed, but attention paid to elaborate calligraphy (ascenders are attenuated/look “clubbed”), pen flourishes are common, “horns” where strokes cross.",
+                                                    "family": "Gothic System of Scripts (s. xii<sup>ex</sup> – s. xvi)",
+                                                    "children": [
+                                                        {
+                                                            "title": "Bastard Secretary",
+                                                            "desc": "Secretary features remain (clubbed ascenders, tall S, etc.) and are combined with a formal ductus which comes from <em>Textualis</em>.",
+                                                            "family": "Gothic System of Scripts (s. xii<sup>ex</sup> – s. xvi)",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "title": "Batarde",
+                                                    "desc": "The highest grade of cursive and the greatest influence from <em>Textualis</em>. Secretary clubbed tall S, calligraphic,c keeps “prickleyness” of Secretary but has regularity and formality of <em>Textualis</em>.",
+                                                    "family": "Gothic System of Scripts (s. xii<sup>ex</sup> – s. xvi)",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "title": "Hybrida",
+                                                    "desc": "<em>Textualis</em> script with several cursive letter forms. Distinguishable from <em>Hybrida Cursiva/Hybrida Currens</em> because it links letters without looping. <em>Hybrida</em> is closer to <em>Textualis</em> and <em>Bastard Anglicana</em> is closer to cursive.",
+                                                    "family": "Gothic System of Scripts (s. xii<sup>ex</sup> – s. xvi)",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "title": "Bastard Anglicana (<em>Anglicana Formata Hybrida</em>)",
+                                                    "desc": "Round loops, letter forms of <em>Anglicana</em> and different forms of <em>Textualis</em>.",
+                                                    "family": "Gothic System of Scripts (s. xii<sup>ex</sup> – s. xvi)",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Libraria (<em>Littera Miniscula Protogothica Textualis Libraria Formata</em>)",
+                                            "desc": "Influenced by English Caroline s. xi<sup>ex</sup> – s. xii<sup>in</sup>.",
+                                            "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                            "bastardof": "English Caroline Miniscule",
+                                            "children": [
+                                                {
+                                                    "title": "Gothic Textualis",
+                                                    "desc": "(s. xii<sup>ex</sup>). Lateral compression, compact, square.",
+                                                    "family": "Gothic System of Scripts (s. xii<sup>ex</sup> – s. xvi)",
+                                                    "children": [
+                                                        {
+                                                            "title": "Textualis Precissa (<em>Sine Pedibus</em>)",
+                                                            "desc": "Minims end on the baseline (horizontal feet), most likely meant for display, compressed, space between script, etc.",
+                                                            "family": "Gothic System of Scripts (s. xii<sup>ex</sup> – s. xvi)",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "title": "Textualis Quadrata (<em>Fracta</em>)",
+                                                            "desc": "Applied feet on the minims, regularity of script, space between script, etc.",
+                                                            "family": "Gothic System of Scripts (s. xii<sup>ex</sup> – s. xvi)",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "title": "Textualis Semi Quadrata (<em>Textura</em>)",
+                                                            "desc": "Bottoms of the minims have applied foot every once in a while (like <em>Textualis Quadrata</em>).",
+                                                            "family": "GothicSystemofScripts(s.xii<sup>ex</sup>–s.xvi)",
+                                                            "children": [
+                                                                {
+                                                                    "title": "Littera Gothica Textualis Rotunda Italiana",
+                                                                    "desc": "Like <em>Textualis Semi Quadrata</em> in ductus.",
+                                                                    "family": "GothicSystemofScripts(s.xii<sup>ex</sup>–s.xvi)",
+                                                                    "children": [
+                                                                        {
+                                                                            "title": "Littera Glossarius Italiana",
+                                                                            "desc": "Smaller version of <em>Littera Gothica Textualis Rotunda Italiana</em> used as gloss for it.",
+                                                                            "family": "GothicSystemofScripts(s.xii<sup>ex</sup>–s.xvi)",
+                                                                            "children": []
+                                                                        },
+                                                                        {
+                                                                            "title": "Littera Gothica Textualis Rotunda Bononiensis",
+                                                                            "desc": "Round caroline miniscule, lateral compression, no attenuation, etc.",
+                                                                            "family": "GothicSystemofScripts(s.xii<sup>ex</sup>–s.xvi)",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "title": "Textualis Rotunda (<em>Textura</em>)",
+                                                            "desc": "Does not have the applied feet, but is instead rounded off with an upwards curve of the pen, tends to laterally compress, etc.",
+                                                            "family": "GothicSystemofScripts(s.xii<sup>ex</sup>–s.xvi)",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "title": "Semigothic Cursive (<em>Littera Semigothica Cursiva</em>)",
+                                                            "desc": "(s. xiv<sup>med</sup> – s. xvi<sup>med</sup>). The stage between Gothic scripts and Humanistic scripts (part of the purification of the Gothic script), breadth, straight-backed d. Used by Petrarch.",
+                                                            "family": "Humanistic Scripts",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "title": "Humanistic Scripts",
+                                                            "desc": "(Florence before 1400). Roundness of aspect, separated letters, no abbreviations, etc.",
+                                                            "family": "Humanistic Scripts",
+                                                            "children": [
+                                                                {
+                                                                    "title": "Humanistic Book Script (<em>Littera Humanistica Textualis, Littera Antiqua</em>)",
+                                                                    "desc": "(1402-1403) Used by Poggio Bracciolini. Caroline ligatures, some horizontal feet on minims, formal Caroline miniscule, etc.",
+                                                                    "family": "Humanistic Scripts",
+                                                                    "children": []
+                                                                },
+                                                                {
+                                                                    "title": "Humanistic Cursive Book Script (<em>Littera Humanistica Cursiva Libraria</em>)",
+                                                                    "desc": "(c. 1420) Invented by Niccolo Niccoli. A rapid version of <em>Humanistic Textualis</em>, takes some letter forms from Semigothic Cursive.",
+                                                                    "family": "Humanistic Scripts",
+                                                                    "children": []
+                                                                },
+                                                                {
+                                                                    "title": "Humanistic Cursive (<em>Littera Humanistica Cursiva, Cancellaresca</em>)",
+                                                                    "desc": "Adaptation of Gothic chancery hands – a combination of formal and cursive, used for documents, very calligraphic, elegant ascenders and descenders.",
+                                                                    "family": "Humanistic Scripts",
+                                                                    "children": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
