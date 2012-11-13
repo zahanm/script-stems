@@ -8,6 +8,7 @@
   var canvas = d3.select("#scripttree").append("svg")
     .attr("width", width)
     .attr("height", height)
+    .on("click", function () { updateTree(null); })
   .append("g")
     .attr("transform", "translate(" + 30 + "," + 20 + ")");
 
@@ -18,51 +19,93 @@
 
   var fulldataset = null;
   var displaydepth = 2;
+  var displayroot = null;
+  var animatime = 2000;
 
+  /**
+   * Tree updating
+   * -------------
+   */
   function updateTree(root) {
 
     root = root || fulldataset;
-    var data = pruneTree(root, displaydepth)
 
-    var nodes = tree.nodes(data);
+    if (typeof root === "string") {
+      root = findNodeWithTitle(root);
+    }
 
+    if (displayroot && displayroot.title == root.title) {
+      return;
+    }
+    displayroot = pruneTree(root, displaydepth);
+
+    var nodes = tree.nodes(displayroot);
+
+    // update path
     var link = canvas.selectAll("path.link")
-      .data(tree.links(nodes))
-    .enter().append("path")
+      .data(tree.links(nodes), function (d) {
+        return d.source.title + " " + d.target.title;
+      });
+
+    // update animation
+    link.transition()
+      .duration(animatime)
+      .attr("d", diagonal);
+
+    // exit path
+    link.exit().remove();
+
+    // enter path
+    link.enter().insert("path", ":first-child")
       .attr("class", "link")
       .attr("d", diagonal);
 
+    // update selection
     var node = canvas.selectAll("g.node")
-      .data(nodes, function (d) { return d.title; })
-    .enter().append("g")
+      .data(nodes, function (d) { return d.title; });
+
+    // update animation
+    node.transition()
+      .duration(animatime)
+      .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+    // exit selection
+    node.exit().remove();
+
+    // enter selection
+    var entrance = node.enter().append("g")
       .attr("class", "node")
-      .attr("transform", function (d) { console.log(d); return "translate(" + d.x + "," + d.y + ")"; });
+      .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
 
-    node.append("circle")
-      .attr("r", 10);
+    entrance.append("circle")
+      .attr("r", 10)
+      .on("click", function (d) { updateTree(d.title); });
 
-    node.append("text")
+    entrance.append("text")
       .attr("class", "title")
       .attr("text-anchor", "middle")
       .attr("dy", 30)
       .text(function (d) { return d.title; });
 
-    /*
-    SVG does not support word wrap, so put "desc" in HTML <foreignobject>
-    -------
-    */
-
-    node.append("foreignObject")
-      .attr("width", 270)
+    // SVG does not support word wrap, so put "desc" in HTML <foreignobject>
+    var w = 270;
+    entrance.append("foreignObject")
+      .attr("width", w)
       .attr("height", 100)
-      .attr("x", -135)
+      .attr("x", -w/2)
       .attr("y", 40)
     .append("xhtml:body")
       .attr("class", "desc")
       .html(function (d) { return d.desc; });
 
+    console.log("Updated");
+    d3.event && d3.event.stopPropagation();
   }
 
+  /**
+   * Tree Pruning
+   * -------------
+   */
   function pruneTree(root, depth) {
     var pruned = {}, k = null;
 
@@ -84,6 +127,27 @@
     return pruned;
   }
 
+  function findNodeWithTitle(title, root) {
+    if (!root) { root = fulldataset; }
+    if (root.title === title) {
+      // base case
+      return root
+    }
+    return root.children.reduce(function (prev, child) {
+      if (prev) { return prev; }
+      return findNodeWithTitle(title, child);
+    }, null);
+  }
+
+  /**
+   * Event handlers
+   * --------------
+   */
+
+  /**
+   * Initial data acquisition
+   * ------------------------
+   */
   d3.json("/data/scripts.json", function (json) {
     fulldataset = json;
 
