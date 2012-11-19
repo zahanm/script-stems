@@ -108,7 +108,7 @@ body {
   font-weight: normal;
 }
 
-#headsupdisplay {
+#info-heads-up {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -122,11 +122,18 @@ body {
   background: white;
 }
 
-#headsupdisplay h3 {
-  font-weight: 400;
+#info-heads-up .inner {
+  height: 180px;
+  padding: 0;
+  overflow: scroll;
 }
 
-#headsupdisplay small {
+#info-heads-up h3 {
+  font-weight: 400;
+  text-shadow: 0 1px 1px #999;
+}
+
+#info-heads-up small {
   color: #777;
   font-weight: normal;
 }

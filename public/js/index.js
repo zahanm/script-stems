@@ -8,17 +8,16 @@
   var canvas = d3.select("#scripttree").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .on("click", function () { updateTree(null); })
   .append("g")
     .attr("transform", "translate(" + 30 + "," + 20 + ")");
 
   var diagonal = d3.svg.diagonal();
 
   var tree = d3.layout.tree()
-    .size([width - 25, height - 185]);
+    .size([width - 25, 5.0 / 3.0 * height - 185]);
 
   var fulldataset = null;
-  var displaydepth = 1;
+  var displaydepth = 2;
   var displayroot = null;
   var animatime = 2000;
 
@@ -89,6 +88,7 @@
       .attr("r", 15)
       .on("click", function (d) { updateTree(d.title); });
 
+    // title
     var w = 160;
     entrance.append("foreignObject")
       .attr("width", w)
@@ -99,6 +99,7 @@
       .attr("class", "title")
       .html(function (d) { return d.title; });
 
+    // description
     // SVG does not support word wrap, so put "desc" in HTML <foreignobject>
     w = 270;
     entrance.append("foreignObject")
@@ -110,15 +111,19 @@
       .attr("class", "desc")
       .html(function (d) { return d.desc; });
 
-    d3.select("#root-title").html(displayroot.title);
+    d3.select("#info-heads-up .title").html(displayroot.title);
     if (displayroot.family)
-      d3.select("#root-family").html(displayroot.family + " <small>family</small>");
+      d3.select("#info-heads-up .family").html(displayroot.family + " <small>family</small>");
     else
-      d3.select("#root-family").html("");
+      d3.select("#info-heads-up .family").html("");
     if (displayroot.subfamily)
-      d3.select("#root-subfamily").html(displayroot.subfamily + " <small>sub-family</small>");
+      d3.select("#info-heads-up .subfamily").html(displayroot.subfamily + " <small>sub-family</small>");
     else
-      d3.select("#root-subfamily").html("");
+      d3.select("#info-heads-up .subfamily").html("");
+    if (displayroot.desc)
+      d3.select("#info-heads-up .desc").html(displayroot.desc + " <small>description</small>");
+    else
+      d3.select("#info-heads-up .desc").html("");
 
     d3.event && d3.event.stopPropagation();
   }
