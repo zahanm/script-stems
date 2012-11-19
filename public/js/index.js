@@ -3,7 +3,7 @@
   "use strict";
 
   var width = 1100;
-  var height = 640;
+  var height = 600;
 
   var canvas = d3.select("#scripttree").append("svg")
     .attr("width", width)
@@ -15,7 +15,7 @@
   var diagonal = d3.svg.diagonal();
 
   var tree = d3.layout.tree()
-    .size([width - 100, height - 185]);
+    .size([width - 25, height - 185]);
 
   var fulldataset = null;
   var displaydepth = 1;

@@ -108,6 +108,29 @@ body {
   font-weight: normal;
 }
 
+#headsupdisplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  margin-left: -140px;
+  height: 180px;
+  margin-top: -90px;
+  z-index: 1002;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px #666;
+  background: white;
+}
+
+#headsupdisplay h3 {
+  font-weight: 400;
+}
+
+#headsupdisplay small {
+  color: #777;
+  font-weight: normal;
+}
+
 /*
 SVG
 */
