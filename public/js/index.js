@@ -14,7 +14,7 @@
   var diagonal = d3.svg.diagonal();
 
   var tree = d3.layout.tree()
-    .size([width - 75, 5.0 / 3.0 * height - 185]);
+    .size([width - 75, 5.0 / 3.0 * height - 160]);
 
   var fulldataset = null;
   var displaydepth = 2;
