@@ -106,6 +106,7 @@ Info box
   padding: 10px 20px;
   box-shadow: 0 0 10px #666;
   background: white;
+  opacity: 0.95;
 }
 
 #info-heads-up .col-left {
@@ -120,7 +121,7 @@ Info box
   height: 180px;
   float: right;
   padding: 0;
-  overflow: scroll;
+  overflow-y: scroll;
   display: inline-block;
 }
 
