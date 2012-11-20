@@ -2,7 +2,7 @@
 (function (exports) {
   "use strict";
 
-  var width = 1100;
+  var width = 1000;
   var height = 600;
 
   var canvas = d3.select("#scripttree").append("svg")
@@ -117,6 +117,40 @@
     d3.event && d3.event.stopPropagation();
   }
 
+  function minimap(root) {
+    root = root || fulldataset;
+
+    var w = 190, h = height;
+
+    var sidecanvas = d3.select("#minimap").append("svg")
+      .attr("width", w)
+      .attr("height", h)
+    .append("g")
+      .attr("transform", "translate(" + 10 + "," + 10 + ")");
+
+    var skeletontree = d3.layout.tree()
+      .size([w - 20, h - 20]);
+
+    var nodes = skeletontree.nodes(root);
+
+    sidecanvas.selectAll("path.link")
+      .data(tree.links(nodes), function (d) {
+        return d.source.title + " " + d.target.title;
+      })
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", diagonal);
+
+    sidecanvas.selectAll("circle.node")
+      .data(nodes, function (d) { return d.title; })
+    .enter().append("circle")
+      .attr("class", "node")
+      .attr("data-title", function (d) { return d.title; })
+      .attr("cx", function (d) { return d.x; })
+      .attr("cy", function (d) { return d.y; })
+      .attr("r", 3);
+  }
+
   /**
    * Tree Pruning
    * -------------
@@ -186,6 +220,7 @@
     fulldataset = json;
 
     updateTree(null);
+    minimap(null)
 
   });
 

@@ -17,7 +17,7 @@ body {
 }
 
 #page {
-  width: 1100px;
+  width: 1200px;
   margin: auto;
   background-color: #fefefe;
   box-shadow: 0 0 15px #333;
@@ -125,23 +125,25 @@ Info box
 }
 
 /*
+Scripts tree
+*/
+
+.canvas-container {
+  display: inline-block;
+}
+
+/*
 SVG
 */
 
 .link {
   fill: none;
   stroke: SaddleBrown;
-  stroke-width: 5px;
 }
 
 .node circle {
   fill: Green;
   stroke: Green;
-  stroke-width: 3px;
-}
-
-.node circle:hover {
-  fill: GreenYellow;
 }
 
 .node .title {
@@ -149,8 +151,18 @@ SVG
   text-align: center;
 }
 
-.node .desc {
-  background: white;
-  text-align: center;
-  overflow: ellipsis;
+#scripttree .link {
+  stroke-width: 5px;
+}
+
+#scripttree .node circle {
+  stroke-width: 3px;
+}
+
+#scripttree .node circle:hover {
+  fill: GreenYellow;
+}
+
+#minimap .node.active {
+  fill: red;
 }
