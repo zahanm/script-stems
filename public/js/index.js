@@ -144,14 +144,19 @@
       .attr("data-title", function (d) { return d.title; })
       .attr("cx", function (d) { return d.x; })
       .attr("cy", function (d) { return d.y; })
-      .attr("r", 2.5);
+      .attr("r", 2);
   }
 
   function highlightMinimapNode(title) {
-    var old = document.querySelector("#minimap circle.node.active");
-    if (old) { old.classList.remove('active'); }
-    var root = document.querySelector("#minimap circle.node[data-title=\"" + title + "\"]");
-    if (root) { root.classList.add('active'); }
+    var sidecanvas = d3.select("#minimap > svg");
+    sidecanvas.selectAll("circle.node.active").attr("class", "node");
+    sidecanvas.selectAll("circle.node")
+      .attr("class", function (d) {
+        if (d.title === title || d.parent && d.parent.title === title)
+          return "node active";
+        else
+          return "node";
+      });
   }
 
   /**

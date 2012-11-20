@@ -11,8 +11,6 @@ steps to take
   - more realiztic branches and leaves
 - marriage relationships
   - detect while building tree
-- leaf node
-  - resize tree
 - search functionality
   - isolate node?
   - debounce
