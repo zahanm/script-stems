@@ -225,8 +225,8 @@
       infobox.querySelector(".profile-pic-label a").innerHTML = root.linktext;
     } else {
       infobox.querySelector(".profile-pic").src = "img/placeholder.png";
-      infobox.querySelector(".profile-pic-box a").href = "mailto://stanfordtreemems@gmail.com";
-      infobox.querySelector(".profile-pic-label a").href = "mailto://stanfordtreemems@gmail.com";
+      infobox.querySelector(".profile-pic-box a").href = "mailto:stanfordtreemems@gmail.com";
+      infobox.querySelector(".profile-pic-label a").href = "mailto:stanfordtreemems@gmail.com";
       infobox.querySelector(".profile-pic-label a").innerHTML = "Contribute an image";
     }
   }
