@@ -12,7 +12,6 @@ steps to take
 - currently browsing node
   - use hover to populate card
   - instructions in for hovering
-  - image for scripts in hover card too
 - marriage relationships
   - detect while building tree
 - leaf node
