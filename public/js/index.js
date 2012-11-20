@@ -14,7 +14,7 @@
   var diagonal = d3.svg.diagonal();
 
   var tree = d3.layout.tree()
-    .size([width - 25, 5.0 / 3.0 * height - 185]);
+    .size([width - 75, 5.0 / 3.0 * height - 185]);
 
   var fulldataset = null;
   var displaydepth = 2;
@@ -89,27 +89,16 @@
       .on("click", function (d) { updateTree(d.title); });
 
     // title
+    // SVG does not support word wrap, so put in HTML <foreignobject>
     var w = 160;
     entrance.append("foreignObject")
       .attr("width", w)
-      .attr("height", 36)
+      .attr("height", 56)
       .attr("x", -w/2)
       .attr("y", 20)
     .append("xhtml:body")
       .attr("class", "title")
       .html(function (d) { return d.title; });
-
-    // description
-    // SVG does not support word wrap, so put "desc" in HTML <foreignobject>
-    w = 270;
-    entrance.append("foreignObject")
-      .attr("width", w)
-      .attr("height", 120)
-      .attr("x", -w/2)
-      .attr("y", 54)
-    .append("xhtml:body")
-      .attr("class", "desc")
-      .html(function (d) { return d.desc; });
 
     d3.select("#info-heads-up .title").html(displayroot.title);
     if (displayroot.family)
@@ -134,13 +123,11 @@
    */
   function pruneTree(root, depth) {
     var pruned = {}, k = null;
-
     for (k in root) {
       if (root.hasOwnProperty(k) && k !== "children") {
         pruned[k] = root[k];
       }
     }
-
     if (depth !== 0) {
       pruned.children = root.children.map(function (child) {
         return pruneTree(child, depth - 1);
@@ -149,7 +136,6 @@
       // base case
       pruned.children = [];
     }
-
     return pruned;
   }
 
