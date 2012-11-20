@@ -39,6 +39,12 @@
     displayroot = pruneTree(root, displaydepth);
 
     var nodes = tree.nodes(displayroot);
+    if (treeDepthAtMost(displayroot, 1)) {
+      nodes.forEach(function (node) {
+        if (node.depth >= 1)
+          node.y /= 2;
+      });
+    }
 
     // update path
     var link = canvas.selectAll("path.link")
@@ -168,6 +174,14 @@
       pruned.children = [];
     }
     return pruned;
+  }
+
+  function treeDepthAtMost(root, n) {
+    if (n < 0) { return false; }
+    return root.children.reduce(function (prev, child) {
+      if (!prev) { return prev; }
+      return treeDepthAtMost(child, n-1);
+    }, true);
   }
 
   function findNodeWithTitle(title, root) {
