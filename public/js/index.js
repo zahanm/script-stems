@@ -86,35 +86,23 @@
 
     entrance.append("circle")
       .attr("r", 15)
-      .on("click", function (d) { updateTree(d.title); });
+      .on("click", function (d) { updateTree(d.title); })
+      .on("mouseover", function (d) { showInfoBox(d); });
 
     // title
     // SVG does not support word wrap, so put in HTML <foreignobject>
-    var w = 160;
+    var w = 110;
     entrance.append("foreignObject")
       .attr("width", w)
-      .attr("height", 56)
+      .attr("height", 80)
       .attr("x", -w/2)
       .attr("y", 20)
     .append("xhtml:body")
       .attr("class", "title")
       .html(function (d) { return d.title; });
 
-    d3.select("#info-heads-up .title").html(displayroot.title);
-    if (displayroot.family)
-      d3.select("#info-heads-up .family").html(displayroot.family + " <small>family</small>");
-    else
-      d3.select("#info-heads-up .family").html("");
-    if (displayroot.subfamily)
-      d3.select("#info-heads-up .subfamily").html(displayroot.subfamily + " <small>sub-family</small>");
-    else
-      d3.select("#info-heads-up .subfamily").html("");
-    if (displayroot.desc)
-      d3.select("#info-heads-up .desc").html(displayroot.desc + " <small>description</small>");
-    else
-      d3.select("#info-heads-up .desc").html("");
-
     highlightMinimapNode(displayroot.title);
+    showInfoBox(displayroot);
 
     d3.event && d3.event.stopPropagation();
   }
@@ -209,6 +197,50 @@
         return findParentOfNodeWithTitle(title, child);
       }, null);
     }
+  }
+
+  /**
+   * Mouse hovers
+   * ------------
+   */
+  function showInfoBox(root) {
+    var infobox = document.querySelector("#info-heads-up");
+    infobox.querySelector(".title").innerHTML = root.title;
+    if (root.family)
+      infobox.querySelector(".family").innerHTML = "<small>Family</small> " + root.family;
+    else
+      infobox.querySelector(".family").innerHTML = "";
+    if (root.subfamily)
+      infobox.querySelector(".subfamily").innerHTML = "<small>Sub-Family</small> " + root.subfamily;
+    else
+      infobox.querySelector(".subfamily").innerHTML = "";
+    if (root.desc)
+      infobox.querySelector(".desc").innerHTML = "<small>Description</small> " + root.desc;
+    else
+      infobox.querySelector(".desc").innerHTML = "";
+    if (root.image && root.link && root.linktext) {
+      infobox.querySelector(".profile-pic").src = root.image;
+      infobox.querySelector(".profile-pic-box a").href = root.link;
+      infobox.querySelector(".profile-pic-label a").href = root.link;
+      infobox.querySelector(".profile-pic-label a").innerHTML = root.linktext;
+    } else {
+      infobox.querySelector(".profile-pic").src = "img/placeholder.png";
+      infobox.querySelector(".profile-pic-box a").href = "mailto://stanfordtreemems@gmail.com";
+      infobox.querySelector(".profile-pic-label a").href = "mailto://stanfordtreemems@gmail.com";
+      infobox.querySelector(".profile-pic-label a").innerHTML = "Contribute an image";
+    }
+  }
+
+  function hideInfoBox() {
+    var infobox = document.querySelector("#info-heads-up");
+    infobox.style.opacity = 0.0;
+    infobox.querySelector(".title").innerHTML = "";
+    infobox.querySelector(".family").innerHTML = "";
+    infobox.querySelector(".desc").innerHTML = "";
+    infobox.querySelector(".profile-pic").src = "";
+    infobox.querySelector(".profile-pic-box a").href = "";
+    infobox.querySelector(".profile-pic-label a").href = "";
+    infobox.querySelector(".profile-pic-label a").innerHTML = "";
   }
 
   /**
