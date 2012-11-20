@@ -165,4 +165,6 @@ SVG
 
 #minimap .node.active {
   fill: red;
+  stroke: red;
+  stroke-width: 5px;
 }

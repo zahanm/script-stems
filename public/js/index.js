@@ -114,6 +114,8 @@
     else
       d3.select("#info-heads-up .desc").html("");
 
+    highlightMinimapNode(displayroot.title);
+
     d3.event && d3.event.stopPropagation();
   }
 
@@ -148,7 +150,14 @@
       .attr("data-title", function (d) { return d.title; })
       .attr("cx", function (d) { return d.x; })
       .attr("cy", function (d) { return d.y; })
-      .attr("r", 3);
+      .attr("r", 2.5);
+  }
+
+  function highlightMinimapNode(title) {
+    var old = document.querySelector("#minimap circle.node.active");
+    if (old) { old.classList.remove('active'); }
+    var root = document.querySelector("#minimap circle.node[data-title=\"" + title + "\"]");
+    if (root) { root.classList.add('active'); }
   }
 
   /**
@@ -218,10 +227,8 @@
    */
   d3.json("data/scripts.json", function (json) {
     fulldataset = json;
-
+    minimap(null);
     updateTree(null);
-    minimap(null)
-
   });
 
 }(window));
