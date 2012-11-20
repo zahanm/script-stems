@@ -236,11 +236,17 @@
                                             "title": "Continental Caroline Miniscule",
                                             "desc": "Uniform head and base lines, uniform ascenders and descenders, roundness, straight minims.",
                                             "family": "Caroline",
+                                            "image": "img/continental caroline miniscule.png",
+                                            "link": "https://collections.stanford.edu/images/bin/zpr?cid=pd341hr8820&fn=1",
+                                            "linktext": "<em>Expositions on the Psalms</em>",
                                             "children": [
                                                 {
                                                     "title": "Continental Protogothic Book Script",
                                                     "desc": "Oval, compression, does not have the horizontal feet of English Caroline Miniscule.",
                                                     "family": "Protogothic Script (<em>Protogothic Script, Littera Miniscula Protogothica</em>)",
+                                                    "image": "img/Continental protogothic book script.png",
+                                                    "link": "https://collections.stanford.edu/images/bin/zpr?cid=kt264fz9218&fn=1",
+                                                    "linktext": "Lectionary",
                                                     "children": []
                                                 }
                                             ]
@@ -336,11 +342,17 @@
                                                             "title": "Textualis Semi Quadrata (<em>Textura</em>)",
                                                             "desc": "Bottoms of the minims have applied foot every once in a while (like <em>Textualis Quadrata</em>).",
                                                             "family": "GothicSystemofScripts(s.xii<sup>ex</sup>–s.xvi)",
+                                                            "image": "img/Textualis semi quadrata.png",
+                                                            "link": "https://collections.stanford.edu/images/bin/zpr?cid=tt083bq4397&fn=1",
+                                                            "linktext": "Deluxe Bible Leaf",
                                                             "children": [
                                                                 {
                                                                     "title": "Littera Gothica Textualis Rotunda Italiana",
                                                                     "desc": "Like <em>Textualis Semi Quadrata</em> in ductus.",
                                                                     "family": "GothicSystemofScripts(s.xii<sup>ex</sup>–s.xvi)",
+                                                                    "image": "img/Littera Gothica Textualis Rotunda Italiana.png",
+                                                                    "link": "https://collections.stanford.edu/images/bin/zpr?cid=jt290kj1718&fn=3",
+                                                                    "linktext": "<em>Pandectae</em> Fragment",
                                                                     "children": [
                                                                         {
                                                                             "title": "Littera Glossarius Italiana",
@@ -368,6 +380,9 @@
                                                             "title": "Semigothic Cursive (<em>Littera Semigothica Cursiva</em>)",
                                                             "desc": "(s. xiv<sup>med</sup> – s. xvi<sup>med</sup>). The stage between Gothic scripts and Humanistic scripts (part of the purification of the Gothic script), breadth, straight-backed d. Used by Petrarch.",
                                                             "family": "Humanistic Scripts",
+                                                            "image": "img/Semigothic Cursive.png",
+                                                            "link": "https://collections.stanford.edu/images/bin/zpr?cid=dz952vd7317&fn=1",
+                                                            "linktext": "<em>Octavia</em>",
                                                             "children": []
                                                         },
                                                         {
@@ -379,6 +394,9 @@
                                                                     "title": "Humanistic Book Script (<em>Littera Humanistica Textualis, Littera Antiqua</em>)",
                                                                     "desc": "(1402-1403) Used by Poggio Bracciolini. Caroline ligatures, some horizontal feet on minims, formal Caroline miniscule, etc.",
                                                                     "family": "Humanistic Scripts",
+                                                                    "image": "img/Humanistic Book Script.png",
+                                                                    "link": "https://collections.stanford.edu/images/bin/zpr?cid=dw728sc2070&fn=2",
+                                                                    "linktext": "<em>Life of St. Catherine of Siena</em>",
                                                                     "children": []
                                                                 },
                                                                 {
