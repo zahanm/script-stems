@@ -201,6 +201,7 @@ SVG
 
 #scripttree .node circle:hover {
   fill: GreenYellow;
+  cursor: pointer;
 }
 
 #minimap .node.active {
