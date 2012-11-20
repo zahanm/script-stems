@@ -15,3 +15,10 @@ steps to take
   - image for scripts in hover card too
 - marriage relationships
   - detect while building tree
+- leaf node
+  - resize tree
+- search functionality
+  - isolate node?
+  - debounce
+- header shorter
+  - whole page fit on small screen

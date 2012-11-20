@@ -108,10 +108,20 @@ Info box
   background: white;
 }
 
-#info-heads-up .inner {
+#info-heads-up .col-left {
+  width: 106px;
+  height: 100%;
+  float: left;
+  display: inline-block;
+}
+
+#info-heads-up .col-right {
+  width: 360px;
   height: 180px;
+  float: right;
   padding: 0;
   overflow: scroll;
+  display: inline-block;
 }
 
 #info-heads-up h3 {
@@ -122,6 +132,19 @@ Info box
 #info-heads-up small {
   color: #777;
   font-weight: normal;
+}
+
+#info-heads-up .profile-pic-box {
+  width: 104px;
+  height: 104px;
+  border: 1px solid #666;
+  margin-top: 34px;
+}
+
+#info-heads-up img.profile-pic {
+  width: 100px;
+  height: 100px;
+  margin: 2px;
 }
 
 /*
